@@ -1,0 +1,15 @@
+.mainContainer {
+  margin: 2rem 0;
+
+  :global(.ant-badge-count) {
+    background-color: #f8eb77 !important;
+    color: black;
+  }
+  :global(.ant-pagination) {
+    display: none;
+  }
+  :global(.ant-modal) {
+    background-color: #f8eb77;
+    width: 280px;
+  }
+}

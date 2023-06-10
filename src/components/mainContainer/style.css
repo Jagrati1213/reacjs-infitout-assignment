@@ -1,0 +1,4 @@
+.float-label-input label,
+.float-label-input input:not(:placeholder-shown)+label {
+    transform: translateY(-1.5rem) scale(0.75);
+}
