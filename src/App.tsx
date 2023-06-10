@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from "react";
+import { Layout } from "antd";
+import Navbar from "./components/header/Navbar";
+import ContainerHeader from "./components/mainContainer/ContainerHeader";
+import TableContainer from "./components/mainContainer/TableContainer";
+const { Footer, Content } = Layout;
+const App: React.FC = () => (
+  <div className="App">
+    <Layout className="xl:container mx-auto">
+      <Navbar />
+      <Content className="pt-6 bg-red-200 container mx-auto lg:px-14">
+        <ContainerHeader />
+        <TableContainer />
+      </Content>
+    </Layout>
+  </div>
+);
 
 export default App;
