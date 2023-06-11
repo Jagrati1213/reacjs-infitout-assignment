@@ -1,3 +1,4 @@
+import { Col, Row } from "antd";
 import React from "react";
 
 const menuData = [
@@ -9,14 +10,14 @@ const menuData = [
 ];
 const MenuList: React.FC = () => (
   <>
-    <ul
-      className="flex justify-evenly font-medium"
+    <Row
+      className="justify-evenly font-medium"
       style={{ letterSpacing: ".1px" }}
     >
       {menuData.map((ele, i) => {
-        return <li key={i}>{ele}</li>;
+        return <Col key={i}>{ele}</Col>;
       })}
-    </ul>
+    </Row>
   </>
 );
 

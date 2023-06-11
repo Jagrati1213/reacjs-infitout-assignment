@@ -25,7 +25,7 @@ function Navbar() {
         </Col>
 
         <Col
-          className=" text-sm font-medium flex justify-center items-center cursor-pointer"
+          className="text-sm font-medium flex justify-center items-center cursor-pointer"
           style={{ lineHeight: "0" }}
         >
           <p className="mx-1">Profile </p>
