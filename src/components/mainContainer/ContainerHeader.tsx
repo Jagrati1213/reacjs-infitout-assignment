@@ -1,21 +1,12 @@
 import React from "react";
-import {
-  Row,
-  Col,
-  Badge,
-  Select,
-  message,
-  Popconfirm,
-  Input,
-  Checkbox,
-} from "antd";
+import { Row, Col, message, Popconfirm, Input, Checkbox } from "antd";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
 import "./style.css";
 import FilterPopUp from "../pops/filterPopup/FilterPopUp";
 import Style from "./style.module.scss";
 import { QuestionCircleOutlined } from "@ant-design/icons";
-import BusketPopup from "../pops/BusketPopup";
+import BusketPopup from "../pops/busketPopup/BusketPopup";
 
 const confirm = () => {
   message.info("Clicked on Yes.");
