@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import TableData from "../Data/TableData.json";
 import Style from "./style.module.scss";
@@ -33,12 +33,12 @@ const columns: ColumnsType<DataType> = [
       {
         title: "IV",
         dataIndex: "IV",
-        width: 70,
+        width: 60,
       },
       {
         title: "OI",
         dataIndex: "OI",
-        width: 70,
+        width: 60,
       },
       {
         title: "Volume",
@@ -53,20 +53,38 @@ const columns: ColumnsType<DataType> = [
       {
         title: "LTP",
         dataIndex: "LTP",
-        width: 70,
+        width: 60,
       },
       {
-        title: "",
+        title: " ",
+        width: 100,
+        render: () => {
+          return (
+            <Space
+              size={[0, "small"]}
+              wrap
+              className="flex flex-row justify-center"
+            >
+              <Tag
+                bordered={false}
+                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
+              >
+                B
+              </Tag>
+              <Tag
+                bordered={false}
+                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
+              >
+                S
+              </Tag>
+            </Space>
+          );
+        },
       },
-    ],
-  },
-  {
-    title: "",
-    children: [
       {
         title: "Strike",
         dataIndex: "Strike",
-        width: 130,
+        width: 100,
       },
     ],
   },
@@ -74,13 +92,36 @@ const columns: ColumnsType<DataType> = [
     title: "PUTS",
     children: [
       {
-        title: "",
+        title: " ",
+        width: 100,
+        render: () => {
+          return (
+            <Space
+              size={[0, "small"]}
+              wrap
+              className="flex flex-row justify-center"
+            >
+              <Tag
+                bordered={false}
+                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
+              >
+                B
+              </Tag>
+              <Tag
+                bordered={false}
+                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
+              >
+                S
+              </Tag>
+            </Space>
+          );
+        },
       },
 
       {
         title: "LTP",
         dataIndex: "RLTP",
-        width: 70,
+        width: 60,
       },
       {
         title: "Chng%",
@@ -95,12 +136,12 @@ const columns: ColumnsType<DataType> = [
       {
         title: "OI",
         dataIndex: "ROI",
-        width: 70,
+        width: 60,
       },
       {
         title: "IV",
         dataIndex: "RIV",
-        width: 70,
+        width: 60,
       },
       {
         title: "OI Buildup",
@@ -130,14 +171,15 @@ TableData.map((ele, i) => {
     ROiBuildup: ele.ROiBuildup,
   });
 });
+
 const TableContainer: React.FC = () => (
   <Table
     className={Style.mainContainer}
-    bordered
     columns={columns}
     dataSource={data}
+    pagination={false}
     size="middle"
-    scroll={{ x: "calc(700px + 50%)", y: 800 }}
+    scroll={{ x: "calc(700px + 50%)" }}
   />
 );
 

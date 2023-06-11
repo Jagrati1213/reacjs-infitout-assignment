@@ -1,15 +1,63 @@
 .mainContainer {
   margin: 2rem 0;
 
+  // Target badge
   :global(.ant-badge-count) {
     background-color: #f8eb77 !important;
     color: black;
   }
-  :global(.ant-pagination) {
-    display: none;
+
+  // :global(.ant-modal) {
+  //   background-color: #f8eb77;
+  //   width: 280px;
+  // }
+
+  // Target 1st row header
+  :global(.ant-table-thead > tr:nth-child(1) > th) {
+    background-color: #fff;
+    border: none;
   }
-  :global(.ant-modal) {
-    background-color: #f8eb77;
-    width: 280px;
+  // Target 2nd row head
+  :global(.ant-table-thead > tr:nth-child(2) > th) {
+    background-color: #e8effb;
+    border-bottom: 1px solid #99b8ed;
+  }
+  // remove right border
+  :global(.ant-table-thead > tr:nth-child(2) > th::before) {
+    width: 0;
+  }
+  // Target all td
+  :global(.ant-table-tbody > tr > td) {
+    font-weight: 500;
+  }
+  // Target left 7 elements  & last 2 right row
+  :global(.ant-table-tbody > tr > td:nth-child(-n + 7)),
+  :global(.ant-table-tbody > tr:nth-last-child(1) > td),
+  :global(.ant-table-tbody > tr:nth-last-child(2) > td) {
+    background-color: #fffacd;
+    border-bottom: 1px solid #f8eb77;
+  }
+
+  // Target right 7 elements & last 2 left row
+  :global(.ant-table-tbody > tr > td),
+  :global(.ant-table-tbody > tr:nth-last-child(1) > td:nth-child(-n + 7)),
+  :global(.ant-table-tbody > tr:nth-last-child(2) > td:nth-child(-n + 7)) {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  // Target only 8th element
+  :global(.ant-table-thead > tr:nth-child(2) > th:nth-child(8)),
+  :global(.ant-table-tbody > tr > td:nth-child(8)) {
+    background-color: #efe8fb;
+    border: 1px solid #d5bcfe;
+    border-top: none;
+  }
+
+  // Target 5 td for color
+  :global(.ant-table-tbody > tr > td:nth-child(5)) {
+    color: #27ae60;
+  }
+  :global(.ant-table-tbody > tr > td:nth-last-child(5)) {
+    color: #ff6b6b;
   }
 }
