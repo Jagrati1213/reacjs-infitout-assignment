@@ -6,7 +6,7 @@ import TableContainer from "./components/mainContainer/TableContainer";
 const { Footer, Content } = Layout;
 const App: React.FC = () => (
   <div className="App">
-    <Layout className="xl:container mx-auto">
+    <Layout>
       <Navbar />
       <Content className="pt-6 bg-white container mx-auto lg:px-14">
         <ContainerHeader />
