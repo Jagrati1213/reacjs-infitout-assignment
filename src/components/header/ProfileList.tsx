@@ -1,3 +1,4 @@
+import { Col, Row } from "antd";
 import React from "react";
 
 const profileListData = [
@@ -21,10 +22,10 @@ const profileListData = [
   },
 ];
 const ProfileList: React.FC = () => (
-  <ul className="flex justify-evenly">
+  <Row className="flex justify-evenly">
     {profileListData.map((ele, i) => {
       return (
-        <li className="text-right" key={i}>
+        <Col className="text-right" key={i}>
           <p
             className="mx-0 text-[#4A4A4A] xl:text-[12px] text-[10px] uppercase"
             style={{ lineHeight: "8px" }}
@@ -41,10 +42,10 @@ const ProfileList: React.FC = () => (
             </span>
             {ele.value}
           </p>
-        </li>
+        </Col>
       );
     })}
-  </ul>
+  </Row>
 );
 
 export default ProfileList;
