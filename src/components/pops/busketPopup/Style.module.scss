@@ -1,0 +1,28 @@
+.busketPop {
+  width: 800px !important;
+  :global(.ant-modal-close) {
+    display: none;
+  }
+  :global(.ant-modal-content) {
+    padding: 0;
+    // width: 618px;
+  }
+  :global(.ant-layout-header) {
+    height: 12px;
+    line-height: 12px;
+  }
+  :global(.ant-modal-footer) {
+    display: none;
+  }
+  :global(.ant-tag) {
+    color: black;
+    font-weight: 700;
+    border-radius: 0;
+  }
+  :global(.ant-table-cell) {
+    padding: 16px 10px !important;
+  }
+}
+:global(.ant-modal-mask) {
+  background-color: transparent !important;
+}
