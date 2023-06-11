@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Popconfirm, Input } from "antd";
+import { Row, Col, Popconfirm, Input, Space } from "antd";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
 import "./style.css";
@@ -12,61 +12,76 @@ const confirm = () => {};
 
 function ContainerHeader() {
   return (
-    <Row className={`${Style.mainContainer}`} justify={"space-between"}>
-      <Col span={12} className="flex justify-evenly items-center my-8">
-        <Col className="relative float-label-input">
-          <Input
-            id="scrip"
-            className="bg-white py-2 px-1 block leading-normal uppercase"
-          />
-          <label
-            htmlFor="scrip"
-            className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
-          >
-            Scrip
-          </label>
-        </Col>
+    <Row
+      className={`${Style.mainContainer} flex-wrap`}
+      justify={"space-between"}
+    >
+      <Col
+        xl={{ span: 10 }}
+        xs={{ span: 24 }}
+        className="flex xl:justify-evenly md:justify-between justify-center items-center my-8 flex-wrap"
+      >
+        <Space>
+          <Col className="relative float-label-input">
+            <Input
+              id="scrip"
+              className="bg-white py-2 px-1 block leading-normal uppercase"
+            />
+            <label
+              htmlFor="scrip"
+              className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
+            >
+              Scrip
+            </label>
+          </Col>
 
-        <Col className="relative float-label-input">
-          <Input
-            id="exp"
-            className=" w-full bg-white py-2 px-1 block leading-normal uppercase"
-          />
-          <label
-            htmlFor="exp"
-            className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
-          >
-            Exp
-          </label>
-        </Col>
+          <Col className="relative float-label-input">
+            <Input
+              id="exp"
+              className=" w-full bg-white py-2 px-1 block leading-normal uppercase"
+            />
+            <label
+              htmlFor="exp"
+              className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
+            >
+              Exp
+            </label>
+          </Col>
+        </Space>
 
-        <Col className="text-left">
-          <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
-            Spot
-          </p>
-          <p className="mx-0 text-sm font-medium mt-2">
-            18,245.3
-            <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
-              0.35%
-            </span>
-          </p>
-        </Col>
+        <Space className="md:my-0 my-6">
+          <Col className="text-left">
+            <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
+              Spot
+            </p>
+            <p className="mx-0 text-sm font-medium mt-2">
+              18,245.3
+              <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
+                0.35%
+              </span>
+            </p>
+          </Col>
 
-        <Col className="text-left">
-          <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
-            Fut
-          </p>
-          <p className="mx-0 text-sm font-medium mt-2">
-            18,251.1
-            <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
-              0.35%
-            </span>
-          </p>
-        </Col>
+          <Col className="text-left">
+            <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
+              Fut
+            </p>
+            <p className="mx-0 text-sm font-medium mt-2">
+              18,251.1
+              <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
+                0.35%
+              </span>
+            </p>
+          </Col>
+        </Space>
       </Col>
 
-      <Col span={10} className="flex justify-between items-center">
-        <Row className="left_box flex justify-evenly">
+      <Col
+        xl={{ span: 11 }}
+        xs={{ span: 24 }}
+        className="flex md:justify-between justify-center items-center xl:mb-0 mb-4 flex-wrap"
+      >
+        <Row className="left_box flex justify-evenly md:my-0 my-6">
           <Col className="mx-2 text-left">
             <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
               Max pain
@@ -110,7 +125,7 @@ function ContainerHeader() {
           </Col>
         </Row>
 
-        <div className={`right_box flex justify-evenly`}>
+        <Space className={`right_box flex justify-evenly md:my-0 my-6`}>
           <Popconfirm
             placement="bottomRight"
             title={<FilterPopUp />}
@@ -131,7 +146,7 @@ function ContainerHeader() {
           </Popconfirm>
 
           <BusketPopup />
-        </div>
+        </Space>
       </Col>
 
       <Col span={22} className="flex justify-end mx-auto">
