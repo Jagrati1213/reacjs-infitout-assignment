@@ -3,7 +3,6 @@ import { Select, Checkbox, Input, InputNumber, Row, Col } from "antd";
 import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { RxCross2 } from "react-icons/rx";
 import Style from "./Style.module.css";
-import { Value } from "sass";
 
 function FilterPopUp() {
   const cancel = (e: React.SyntheticEvent<EventTarget>): void => {};
