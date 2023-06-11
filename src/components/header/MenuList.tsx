@@ -11,11 +11,15 @@ const menuData = [
 const MenuList: React.FC = () => (
   <>
     <Row
-      className="justify-evenly font-medium"
+      className="justify-evenly font-medium xl:flex-row flex-col"
       style={{ letterSpacing: ".1px" }}
     >
       {menuData.map((ele, i) => {
-        return <Col key={i}>{ele}</Col>;
+        return (
+          <Col key={i} className="xl:my-0 my-4">
+            {ele}
+          </Col>
+        );
       })}
     </Row>
   </>
