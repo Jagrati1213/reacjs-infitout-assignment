@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Row,
   Col,
@@ -9,12 +9,10 @@ import {
   Input,
   Checkbox,
 } from "antd";
-import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
-import { RxCross2 } from "react-icons/rx";
 import "./style.css";
-import FilterPopUp from "../pops/FilterPopUp";
+import FilterPopUp from "../pops/filterPopup/FilterPopUp";
 import Style from "./style.module.scss";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import BusketPopup from "../pops/BusketPopup";
@@ -122,6 +120,7 @@ function ContainerHeader() {
             </div>
           </Col>
         </Row>
+
         <div className={`right_box flex justify-evenly`}>
           <Popconfirm
             placement="bottomRight"
