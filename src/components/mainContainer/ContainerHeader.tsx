@@ -27,11 +27,10 @@ function ContainerHeader() {
   return (
     <Row className={`${Style.mainContainer}`} justify={"space-between"}>
       <Col span={12} className="flex justify-evenly items-center my-8">
-        <div className="relative float-label-input">
-          <input
-            type="text"
+        <Col className="relative float-label-input">
+          <Input
             id="scrip"
-            className=" w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300  py-2 px-1 block appearance-none leading-normal uppercase"
+            className="bg-white py-2 px-1 block leading-normal uppercase"
           />
           <label
             htmlFor="scrip"
@@ -39,13 +38,12 @@ function ContainerHeader() {
           >
             Scrip
           </label>
-        </div>
+        </Col>
 
-        <div className="relative float-label-input">
-          <input
-            type="text"
+        <Col className="relative float-label-input">
+          <Input
             id="exp"
-            className=" w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-1 block appearance-none leading-normal uppercase"
+            className=" w-full bg-white py-2 px-1 block leading-normal uppercase"
           />
           <label
             htmlFor="exp"
@@ -53,9 +51,9 @@ function ContainerHeader() {
           >
             Exp
           </label>
-        </div>
+        </Col>
 
-        <div className="text-left">
+        <Col className="text-left">
           <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
             Spot
           </p>
@@ -65,9 +63,9 @@ function ContainerHeader() {
               0.35%
             </span>
           </p>
-        </div>
+        </Col>
 
-        <div className="text-left">
+        <Col className="text-left">
           <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
             Fut
           </p>
@@ -77,26 +75,26 @@ function ContainerHeader() {
               0.35%
             </span>
           </p>
-        </div>
+        </Col>
       </Col>
 
       <Col span={10} className="flex justify-between items-center">
-        <div className="left_box flex justify-evenly">
-          <div className="mx-2 text-left">
+        <Row className="left_box flex justify-evenly">
+          <Col className="mx-2 text-left">
             <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
               Max pain
             </p>
             <p className="mx-0 text-sm font-medium mt-2">18,200</p>
-          </div>
+          </Col>
 
-          <div className="mx-2 text-left">
+          <Col className="mx-2 text-left">
             <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
               PCR
             </p>
             <p className="mx-0 text-sm font-medium mt-2">0.92</p>
-          </div>
+          </Col>
 
-          <div className="flex mx-2 text-left">
+          <Col className="flex mx-2 text-left">
             <div className="ml-1">
               <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
                 Support 1
@@ -108,9 +106,9 @@ function ContainerHeader() {
               <BiChevronUp className="font-bold ml-1 cursor-pointer" />
               <BiChevronDown className="font-bold ml-1 cursor-pointer" />
             </div>
-          </div>
+          </Col>
 
-          <div className="flex mx-2 text-left">
+          <Col className="flex mx-2 text-left">
             <div className="ml-2">
               <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
                 Resistance 1
@@ -122,8 +120,8 @@ function ContainerHeader() {
               <BiChevronUp className="font-bold ml-1 cursor-pointer" />
               <BiChevronDown className="font-bold ml-1 cursor-pointer" />
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
         <div className={`right_box flex justify-evenly`}>
           <Popconfirm
             placement="bottomRight"
@@ -149,14 +147,14 @@ function ContainerHeader() {
       </Col>
 
       <Col span={22} className="flex justify-end mx-auto">
-        <div className="ml-2">
+        <Col className="ml-2">
           <button className="px-8 py-[6px] bg-[#2C57F5] text-white rounded-lg">
             LTP
           </button>
           <button className="ml-3 px-8 py-[6px] bg-[#E1E1E1] text-black rounded-lg">
             Greeks
           </button>
-        </div>
+        </Col>
       </Col>
     </Row>
   );
