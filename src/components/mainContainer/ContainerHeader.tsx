@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, message, Popconfirm, Input, Checkbox } from "antd";
+import { Row, Col, Popconfirm, Input } from "antd";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
 import "./style.css";
@@ -8,9 +8,7 @@ import Style from "./style.module.scss";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import BusketPopup from "../pops/busketPopup/BusketPopup";
 
-const confirm = () => {
-  message.info("Clicked on Yes.");
-};
+const confirm = () => {};
 
 function ContainerHeader() {
   return (
