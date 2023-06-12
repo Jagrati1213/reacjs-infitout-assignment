@@ -9,11 +9,6 @@ import ResponsiveHeader from "./ResponsiveHeader";
 const { Header } = Layout;
 
 function Navbar() {
-  const [messageApi, contextHolder] = message.useMessage();
-
-  const info = () => {
-    messageApi.info("Hello, welcome track trades!");
-  };
   return (
     <>
       {/* Display on laptop */}
@@ -41,12 +36,10 @@ function Navbar() {
           </Col>
 
           {/* Profile icon */}
-          {/* {contextHolder} */}
           <Popover placement="bottomRight" title="Your Profile" trigger="click">
             <Col
               className="text-sm font-medium flex justify-center items-center cursor-pointer"
               style={{ lineHeight: "0" }}
-              onClick={info}
             >
               <p className="mx-1">Profile </p>
               <IconContext.Provider value={{ size: "20px" }}>
