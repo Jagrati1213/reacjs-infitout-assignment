@@ -27,7 +27,7 @@ const TradesList: React.FC = () => (
       return (
         <Col className="xl:text-right xl:my-0 my-4" key={i}>
           <p
-            className="mx-0 text-[#4A4A4A] xl:text-[12px] text-[13px] uppercase"
+            className="mx-0 text-[#4A4A4A] xl:text-[10px] text-[13px] uppercase"
             style={{ lineHeight: "8px" }}
           >
             {ele.name}
@@ -35,7 +35,7 @@ const TradesList: React.FC = () => (
           <p className="mx-0 text-sm font-medium mt-2">
             <span
               style={{ color: ele.color }}
-              className={`xl:text-[12px] text-[15px] mx-1`}
+              className={`xl:text-[10px] text-[15px] mx-1`}
             >
               {ele.profitsVal}
             </span>
