@@ -1,9 +1,27 @@
 .filterPop {
   border-bottom: 1px solid #d3d3d3;
-}
 
+  :global(.ant-checkbox-inner) {
+    border-radius: 0px;
+  }
+  :global(
+      .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner
+    ) {
+    background-color: #610bef !important;
+    border-color: #610bef !important;
+  }
+  :global(.ant-select .ant-select-arrow) {
+    color: #14142b;
+    font-weight: 500;
+  }
+}
+:global(.ant-popover .ant-popover-inner) {
+  border-radius: 4px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1), 0 3px 6px -4px rgba(0, 0, 0, 0.1),
+    0 9px 28px 8px rgba(0, 0, 0, 0.1);
+}
 :global(.ant-popconfirm-buttons) {
-  padding: 8px 0;
+  padding: 8px 12px;
 
   :global(.ant-btn-default) {
     color: #2c57f5;
