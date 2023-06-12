@@ -8,7 +8,7 @@ const App: React.FC = () => (
   <div className="App">
     <Layout>
       <Navbar />
-      <Content className="pt-6 bg-white xl:container w-full xl:mx-auto xl:px-14 px-5">
+      <Content className="pt-6 bg-[#FBFBFB] xl:container w-full xl:mx-auto xl:px-14 px-5">
         <ContainerHeader />
         <TableContainer />
       </Content>
