@@ -5,7 +5,6 @@
   }
   :global(.ant-modal-content) {
     padding: 0;
-    // width: 618px;
   }
   :global(.ant-layout-header) {
     height: 12px;
@@ -20,9 +19,27 @@
     border-radius: 0;
   }
   :global(.ant-table-cell) {
-    padding: 16px 10px !important;
+    padding: 6px 10px !important;
+  }
+  :global(.ant-table-thead > tr > th) {
+    background: #ffffff;
+    font-weight: normal;
+  }
+  :global(.ant-table-thead > tr > th::before) {
+    width: 0px !important;
+  }
+  :global(.ant-table-tbody > tr:nth-child(even)) {
+    background: #f9f9f9;
+    border-color: transparent;
+  }
+  :global(.ant-table-tbody > tr:nth-child(odd)) {
+    background: #ffffff;
+    border-color: transparent;
   }
 }
 :global(.ant-modal-mask) {
   background-color: transparent !important;
+}
+:global(.ant-scroll-number-only-unit) {
+  font-weight: 500;
 }
