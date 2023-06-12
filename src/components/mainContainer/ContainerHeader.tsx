@@ -9,23 +9,37 @@ import { QuestionCircleOutlined } from "@ant-design/icons";
 import BusketPopup from "../pops/busketPopup/BusketPopup";
 
 const confirm = () => {};
+interface PropsName {
+  tradeName: string;
+  tradePrice: number;
+}
+export const TradeEle = (props: PropsName) => {
+  return (
+    <>
+      <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
+        {props.tradeName}
+      </p>
+      <p className="mx-0 text-sm font-medium mt-2">{props.tradePrice}</p>
+    </>
+  );
+};
 
 function ContainerHeader() {
   return (
     <Row
-      className={`${Style.mainContainer} flex-wrap`}
+      className={`${Style.mainContainer} flex-wrap lg:flex-row flex-col`}
       justify={"space-between"}
     >
       <Col
-        xl={{ span: 10 }}
+        xl={{ span: 11 }}
         xs={{ span: 24 }}
-        className="flex xl:justify-evenly md:justify-between justify-center items-center my-8 flex-wrap"
+        className="flex xl:justify-evenly md:justify-between xl:items-center lg:my-8 md:flex-nowrap flex-wrap md:flex-row flex-col"
       >
-        <Space>
+        <Space className="left_box flex lg:justify-evenly md:my-0 md:flex-nowrap flex-wrap">
           <Col className="relative float-label-input">
             <Input
               id="scrip"
-              className="bg-white py-2 px-1 block leading-normal uppercase"
+              className="bg-white py-2 px-1 block leading-normal uppercase rounded-none"
             />
             <label
               htmlFor="scrip"
@@ -38,7 +52,7 @@ function ContainerHeader() {
           <Col className="relative float-label-input">
             <Input
               id="exp"
-              className=" w-full bg-white py-2 px-1 block leading-normal uppercase"
+              className=" w-full bg-white py-2 px-1 block leading-normal uppercase rounded-none"
             />
             <label
               htmlFor="exp"
@@ -49,7 +63,7 @@ function ContainerHeader() {
           </Col>
         </Space>
 
-        <Space className="md:my-0 my-6">
+        <Space className="xl:my-1 my-6 ml-2 md:flex-nowrap flex-wrap">
           <Col className="text-left">
             <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
               Spot
@@ -79,29 +93,20 @@ function ContainerHeader() {
       <Col
         xl={{ span: 11 }}
         xs={{ span: 24 }}
-        className="flex md:justify-between justify-center items-center xl:mb-0 mb-4 flex-wrap"
+        className="flex md:justify-between lg:items-center xl:mb-0 mb-4 flex-wrap md:flex-row flex-col"
       >
-        <Row className="left_box flex justify-evenly md:my-0 my-6">
-          <Col className="mx-2 text-left">
-            <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
-              Max pain
-            </p>
-            <p className="mx-0 text-sm font-medium mt-2">18,200</p>
+        <Row className="left_box flex lg:justify-evenly md:my-0 md:flex-nowrap flex-wrap">
+          <Col className="m-2 text-left">
+            <TradeEle tradeName="Max pain" tradePrice={18200} />
           </Col>
 
-          <Col className="mx-2 text-left">
-            <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
-              PCR
-            </p>
-            <p className="mx-0 text-sm font-medium mt-2">0.92</p>
+          <Col className="m-2 text-left">
+            <TradeEle tradeName="PCR" tradePrice={0.92} />
           </Col>
 
-          <Col className="flex mx-2 text-left">
+          <Col className="flex m-2 text-left">
             <div className="ml-1">
-              <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
-                Support 1
-              </p>
-              <p className="mx-0 text-sm font-medium mt-2">18100</p>
+              <TradeEle tradeName="Support 1" tradePrice={18100} />
             </div>
 
             <div className="flex flex-col text-[15px] text-[#14142B]">
@@ -110,22 +115,21 @@ function ContainerHeader() {
             </div>
           </Col>
 
-          <Col className="flex mx-2 text-left">
+          <Col className="flex m-2 text-left">
             <div className="ml-2">
-              <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
-                Resistance 1
-              </p>
-              <p className="mx-0 text-sm font-medium mt-2">18500</p>
+              <TradeEle tradeName="Resistance 1" tradePrice={18500} />
             </div>
 
-            <div className="flex flex-col text-[15px]">
+            <div className="flex flex-col text-[15px] text-[#14142B]">
               <BiChevronUp className="font-bold ml-1 cursor-pointer" />
               <BiChevronDown className="font-bold ml-1 cursor-pointer" />
             </div>
           </Col>
         </Row>
 
-        <Space className={`right_box flex justify-evenly md:my-0 my-6`}>
+        <Space
+          className={`right_box flex lg:justify-evenly md:my-0 my-6 md:flex-nowrap flex-wrap`}
+        >
           <Popconfirm
             placement="bottomRight"
             title={<FilterPopUp />}
@@ -140,7 +144,7 @@ function ContainerHeader() {
             }
           >
             <div className="flex justify-evenly text-base items-center cursor-pointer">
-              <BsSliders />
+              <BsSliders className="text-[#14142B]" />
               <p className="mx-2 font-medium">Filters</p>
             </div>
           </Popconfirm>
@@ -149,15 +153,13 @@ function ContainerHeader() {
         </Space>
       </Col>
 
-      <Col span={22} className="flex justify-end mx-auto">
-        <Col className="ml-2">
-          <button className="px-8 py-[6px] bg-[#2C57F5] text-white rounded-lg">
-            LTP
-          </button>
-          <button className="ml-3 px-8 py-[6px] bg-[#E1E1E1] text-black rounded-lg">
-            Greeks
-          </button>
-        </Col>
+      <Col span={24} className="flex lg:justify-end flex-wrap">
+        <button className="m-2 px-8 py-[6px] bg-[#2C57F5] text-white rounded-[8px]">
+          LTP
+        </button>
+        <button className="m-2 px-8 py-[6px] bg-[#E1E1E1] text-black rounded-[8px]">
+          Greeks
+        </button>
       </Col>
     </Row>
   );
