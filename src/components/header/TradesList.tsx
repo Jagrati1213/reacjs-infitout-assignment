@@ -21,7 +21,7 @@ const profileListData = [
     value: "12.12",
   },
 ];
-const ProfileList: React.FC = () => (
+const TradesList: React.FC = () => (
   <Row className="flex justify-evenly xl:flex-row flex-col">
     {profileListData.map((ele, i) => {
       return (
@@ -34,7 +34,8 @@ const ProfileList: React.FC = () => (
           </p>
           <p className="mx-0 text-sm font-medium mt-2">
             <span
-              className={`text-[${ele.color}] xl:text-[12px] text-[15px] mx-1`}
+              style={{ color: ele.color }}
+              className={`xl:text-[12px] text-[15px] mx-1`}
             >
               {ele.profitsVal}
             </span>
@@ -46,4 +47,4 @@ const ProfileList: React.FC = () => (
   </Row>
 );
 
-export default ProfileList;
+export default TradesList;

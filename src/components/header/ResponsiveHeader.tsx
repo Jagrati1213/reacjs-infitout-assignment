@@ -3,7 +3,7 @@ import { Button, Col, Drawer, Row } from "antd";
 import { Header } from "antd/es/layout/layout";
 import logo from "../../image/logo.png";
 import MenuList from "./MenuList";
-import ProfileList from "./ProfileList";
+import ProfileList from "./TradesList";
 import { IconContext } from "react-icons/lib";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { MenuFoldOutlined } from "@ant-design/icons";
@@ -48,18 +48,6 @@ function ResponsiveHeader() {
         >
           <Col span={24}>
             <MenuList />
-          </Col>
-
-          <Col span={24}>
-            <ProfileList />
-          </Col>
-
-          <Col className="text-base font-medium flex justify-center items-center cursor-pointer my-4">
-            <p className="mx-1">Profile </p>
-
-            <IconContext.Provider value={{ size: "22px" }}>
-              <RiArrowDownSLine />
-            </IconContext.Provider>
           </Col>
         </Row>
       </Drawer>
