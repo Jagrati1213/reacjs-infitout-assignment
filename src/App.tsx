@@ -3,12 +3,12 @@ import { Layout } from "antd";
 import Navbar from "./components/header/Navbar";
 import ContainerHeader from "./components/mainContainer/ContainerHeader";
 import TableContainer from "./components/mainContainer/TableContainer";
-const { Footer, Content } = Layout;
+const { Content } = Layout;
 const App: React.FC = () => (
   <div className="App">
-    <Layout>
+    <Layout className="bg-[#FBFBFB]">
       <Navbar />
-      <Content className="pt-6 bg-[#FBFBFB] xl:container w-full xl:mx-auto xl:px-14 px-5">
+      <Content className="pt-6 2xl:container w-full xl:mx-auto xl:px-14 px-5">
         <ContainerHeader />
         <TableContainer />
       </Content>
