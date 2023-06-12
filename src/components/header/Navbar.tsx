@@ -42,7 +42,7 @@ function Navbar() {
               style={{ lineHeight: "0" }}
             >
               <p className="mx-1">Profile </p>
-              <IconContext.Provider value={{ size: "20px" }}>
+              <IconContext.Provider value={{ size: "20px", color: "#14142B" }}>
                 <RiArrowDownSLine />
               </IconContext.Provider>
             </Col>

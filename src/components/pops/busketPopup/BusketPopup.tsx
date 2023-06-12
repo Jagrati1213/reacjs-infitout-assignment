@@ -46,23 +46,48 @@ const BusketPopup = () => {
           <header style={{ backgroundColor: "#2C57F5" }} className="w-full p-4">
             <Row justify={"space-between"}>
               <Col className="text-white text-sm font-medium">
-                <p className="font-normal">Max profit</p>
+                <p
+                  className="font-normal"
+                  style={{ fontFamily: `'Playfair Display', serif` }}
+                >
+                  Max profit
+                </p>
                 <p>24,000/-</p>
               </Col>
               <Col className="text-white text-sm font-medium">
-                <p className="font-normal">Max loss</p>
+                <p
+                  className="font-normal"
+                  style={{ fontFamily: `'Playfair Display', serif` }}
+                >
+                  Max loss
+                </p>
                 <p>Unlimited</p>
               </Col>
               <Col className="text-white text-sm font-medium">
-                <p className="font-normal">Risk:Reward</p>
+                <p
+                  className="font-normal"
+                  style={{ fontFamily: `'Playfair Display', serif` }}
+                >
+                  Risk:Reward
+                </p>
                 <p>NA</p>
               </Col>
               <Col className="text-white text-sm font-medium">
-                <p className="font-normal">Probability</p>
+                <p
+                  className="font-normal"
+                  style={{ fontFamily: `'Playfair Display', serif` }}
+                >
+                  Probability
+                </p>
                 <p>32%</p>
               </Col>
               <Col className="text-white text-sm font-medium">
-                <p className="font-normal">Breakeven</p>
+                <p
+                  className="font-normal"
+                  style={{ fontFamily: `'Playfair Display', serif` }}
+                >
+                  Breakeven
+                </p>
                 <p> {`> 38124.2`}</p>
               </Col>
             </Row>
@@ -82,12 +107,19 @@ const BusketPopup = () => {
             >
               <Col className="text-sm font-normal my-1 flex ">
                 <div>
-                  <p className="my-1">
-                    Margin required: <span className="mx-2">₹ 2,43,630.3</span>
+                  <p
+                    className="my-1"
+                    style={{ fontFamily: `'Playfair Display', serif` }}
+                  >
+                    Margin required:{" "}
+                    <span className="mx-2 font-sans">₹ 2,43,630.3</span>
                   </p>
-                  <p className="my-1">
+                  <p
+                    className="my-1"
+                    style={{ fontFamily: `'Playfair Display', serif` }}
+                  >
                     Available funds:
-                    <span className="mx-[15px]">₹ 12,00,000,00</span>
+                    <span className="mx-[15px] font-sans">₹ 12,00,000,00</span>
                   </p>
                 </div>
 

@@ -16,7 +16,10 @@ interface PropsName {
 export const TradeEle = (props: PropsName) => {
   return (
     <>
-      <p className="mx-0 text-[#888888] xl:text-[12px] font-medium">
+      <p
+        className="mx-0 text-[#888888] xl:text-[12px] font-medium"
+        style={{ fontFamily: `'Playfair Display', serif` }}
+      >
         {props.tradeName}
       </p>
       <p className="mx-0 text-sm font-medium mt-2">{props.tradePrice}</p>
@@ -43,6 +46,7 @@ function ContainerHeader() {
             />
             <label
               htmlFor="scrip"
+              style={{ fontFamily: `'Playfair Display', serif` }}
               className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
             >
               Scrip
@@ -56,6 +60,7 @@ function ContainerHeader() {
             />
             <label
               htmlFor="exp"
+              style={{ fontFamily: `'Playfair Display', serif` }}
               className="absolute top-3 left-0 text-[#8F8F8F] pointer-events-none transition duration-200 ease-in-out bg-white px-2 text-grey-darker"
             >
               Exp
@@ -65,7 +70,10 @@ function ContainerHeader() {
 
         <Space className="xl:my-1 my-6 ml-2 md:flex-nowrap flex-wrap">
           <Col className="text-left">
-            <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
+            <p
+              className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium"
+              style={{ fontFamily: `'Playfair Display', serif` }}
+            >
               Spot
             </p>
             <p className="mx-0 text-sm font-medium mt-2">
@@ -77,7 +85,10 @@ function ContainerHeader() {
           </Col>
 
           <Col className="text-left">
-            <p className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium">
+            <p
+              className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium"
+              style={{ fontFamily: `'Playfair Display', serif` }}
+            >
               Fut
             </p>
             <p className="mx-0 text-sm font-medium mt-2">
