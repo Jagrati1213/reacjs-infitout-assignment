@@ -8,8 +8,8 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 interface DataType {
   key: string;
   instrument: string;
-  bs: string[];
-  type: string[];
+  bs: string;
+  type: string;
   qty: number;
   price: number;
   trigger: number;
@@ -19,40 +19,34 @@ const columns: ColumnsType<DataType> = [
     title: "Instrument",
     dataIndex: "instrument",
     key: "instrument",
+    render: (instrument) => {
+      return <p className=" font-medium">{instrument}</p>;
+    },
   },
   {
     title: "B/S",
     key: "bs",
     dataIndex: "bs",
-    render: (_, { bs }) => (
-      <>
-        {bs.map((ele) => {
-          let color = ele === "S" ? "#FFA8A8" : "#86C6E6";
-          return (
-            <Tag color={color} key={ele}>
-              {ele.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
+    render: (bs) => {
+      let color = bs === "S" ? "#FFA8A8" : "#86C6E6";
+      return (
+        <Tag color={color} key={bs}>
+          {bs.toUpperCase()}
+        </Tag>
+      );
+    },
   },
   {
     title: "Type",
     key: "type",
     dataIndex: "type",
-    render: (_, { type }) => (
-      <>
-        {type.map((ele) => {
-          let color = "#2C57F5";
-          return (
-            <Tag color={color} key={ele} style={{ color: "white" }}>
-              {ele.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
+    render: (type) => {
+      return (
+        <Tag color={"#2C57F5"} key={type} style={{ color: "white" }}>
+          {type.toUpperCase()}
+        </Tag>
+      );
+    },
   },
   {
     title: "Qty",
@@ -87,15 +81,15 @@ const columns: ColumnsType<DataType> = [
         <Row>
           <Col className="flex items-center justify-center text-[#2C57F5]">
             <PlusCircleOutlined />
-            <span className="mx-1">SL</span>
+            <span className="mx-1 font-medium">SL</span>
           </Col>
 
           <Col className="flex items-center justify-center text-[#2C57F5]">
             <PlusCircleOutlined />
-            <span className="mx-1">Tgt</span>
+            <span className="mx-1 font-medium">Tgt</span>
           </Col>
 
-          <Col className="flex items-center justify-center mx-2  text-[#bababa] cursor-pointer">
+          <Col className="flex items-center justify-center mx-2  text-[#D3D3D3] cursor-pointer">
             <IconContext.Provider value={{ size: "17px" }}>
               <RiDeleteBin5Line />
             </IconContext.Provider>
@@ -110,8 +104,8 @@ const data: DataType[] = [
   {
     key: "1",
     instrument: "NIFTY 18MAY23 18200 CE",
-    bs: ["B"],
-    type: ["MIS"],
+    bs: "B",
+    type: "MIS",
     qty: 50,
     price: 120.5,
     trigger: 0,
@@ -119,8 +113,8 @@ const data: DataType[] = [
   {
     key: "2",
     instrument: "NIFTY 18MAY23 18200 PE",
-    bs: ["S"],
-    type: ["NRML"],
+    bs: "S",
+    type: "NRML",
     qty: 50,
     price: 98.1,
     trigger: 0,
@@ -128,8 +122,8 @@ const data: DataType[] = [
   {
     key: "3",
     instrument: "NIFTY 18MAY23 19200 CE",
-    bs: ["B"],
-    type: ["MIS"],
+    bs: "B",
+    type: "MIS",
     qty: 50,
     price: 80.3,
     trigger: 0,
@@ -137,7 +131,7 @@ const data: DataType[] = [
 ];
 
 const BusketContent: React.FC = () => {
-  return <Table columns={columns} dataSource={data} />;
+  return <Table columns={columns} dataSource={data} scroll={{ x: 100 }} />;
 };
 
 export default BusketContent;
