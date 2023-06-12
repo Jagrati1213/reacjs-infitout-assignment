@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { Button, Col, Drawer, Row } from "antd";
-import { Header } from "antd/es/layout/layout";
 import logo from "../../image/logo.png";
 import MenuList from "./MenuList";
-import ProfileList from "./TradesList";
-import { IconContext } from "react-icons/lib";
-import { RiArrowDownSLine } from "react-icons/ri";
 import { MenuFoldOutlined } from "@ant-design/icons";
-import style from "./style.module.scss";
 
 function ResponsiveHeader() {
   const [open, setOpen] = useState<boolean>(false);
@@ -40,7 +35,7 @@ function ResponsiveHeader() {
         placement="right"
         onClose={onClose}
         open={open}
-        className={`${style.drawerStyle} bg-white z-10 xl:hidden block`}
+        className={`bg-white z-10 xl:hidden block`}
       >
         <Row
           justify={"space-evenly"}
