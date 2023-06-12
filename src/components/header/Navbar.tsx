@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../image/logo.png";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { Layout, Row, Col, message } from "antd";
+import { Layout, Row, Col, message, Popover } from "antd";
 import MenuList from "./MenuList";
 import TradesList from "./TradesList";
 import { IconContext } from "react-icons/lib";
@@ -41,17 +41,19 @@ function Navbar() {
           </Col>
 
           {/* Profile icon */}
-          {contextHolder}
-          <Col
-            className="text-sm font-medium flex justify-center items-center cursor-pointer"
-            style={{ lineHeight: "0" }}
-            onClick={info}
-          >
-            <p className="mx-1">Profile </p>
-            <IconContext.Provider value={{ size: "20px" }}>
-              <RiArrowDownSLine />
-            </IconContext.Provider>
-          </Col>
+          {/* {contextHolder} */}
+          <Popover placement="bottomRight" title="Your Profile" trigger="click">
+            <Col
+              className="text-sm font-medium flex justify-center items-center cursor-pointer"
+              style={{ lineHeight: "0" }}
+              onClick={info}
+            >
+              <p className="mx-1">Profile </p>
+              <IconContext.Provider value={{ size: "20px" }}>
+                <RiArrowDownSLine />
+              </IconContext.Provider>
+            </Col>
+          </Popover>
         </Row>
       </Header>
 
