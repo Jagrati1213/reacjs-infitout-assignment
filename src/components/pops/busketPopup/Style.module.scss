@@ -37,6 +37,11 @@
     background: #ffffff;
     border-color: transparent;
   }
+  :global(.ant-table-content) {
+    height: 40vh;
+    max-height: 40vh;
+    overflow-y: scroll !important;
+  }
 }
 :global(.ant-modal-mask) {
   background-color: transparent !important;
