@@ -13,12 +13,12 @@ function Navbar() {
     <>
       {/* Display on laptop */}
       <Header
-        className=" bg-white text-black px-5 border-2 h-[78px] overflow-hidden shadow-md shadow-[rgba(0, 0, 0, 0.12)] xl:block hidden z-10"
+        className=" bg-white text-black px-5 border-2 h-[68px] overflow-hidden shadow-md shadow-[rgba(0, 0, 0, 0.12)] xl:block hidden z-10"
         style={{ position: "sticky", top: 0 }}
       >
         <Row
           justify={"space-between"}
-          className="h-[73px] items-center flex-wrap"
+          className="h-[63px] items-center flex-wrap"
         >
           {/* Logo */}
           <Col className="mx-3 p-1">
@@ -39,7 +39,7 @@ function Navbar() {
           <Popover placement="bottomRight" title="Your Profile" trigger="click">
             <Col
               className="text-sm font-medium flex justify-center items-center cursor-pointer"
-              style={{ lineHeight: "0" }}
+              style={{ lineHeight: "0", fontFamily: `'Satoshi', sans-serif` }}
             >
               <p className="mx-1">Profile </p>
               <IconContext.Provider value={{ size: "20px", color: "#14142B" }}>

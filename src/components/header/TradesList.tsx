@@ -25,9 +25,13 @@ const TradesList: React.FC = () => (
   <Row className="flex justify-evenly xl:flex-row flex-col">
     {profileListData.map((ele, i) => {
       return (
-        <Col className="xl:text-right xl:my-0 my-4" key={i}>
+        <Col
+          className="xl:text-right xl:my-0 my-4"
+          key={i}
+          style={{ fontFamily: `'Satoshi', sans-serif` }}
+        >
           <p
-            className="mx-0 text-[#4A4A4A] xl:text-[10px] text-[13px] uppercase"
+            className="mx-0 text-[#4A4A4A] xl:text-[10px] text-[13px] uppercase font-medium"
             style={{ lineHeight: "8px" }}
           >
             {ele.name}

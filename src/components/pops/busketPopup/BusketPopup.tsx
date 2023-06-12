@@ -27,6 +27,7 @@ const BusketPopup = () => {
           <Button
             type={"primary"}
             className="px-10 bg-[#2C57F5] text-white rounded-none"
+            style={{ fontFamily: `'Satoshi', sans-serif` }}
           >
             Basket
           </Button>
@@ -40,12 +41,16 @@ const BusketPopup = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         className={Style.busketPop}
+        style={{ fontFamily: `'Satoshi', sans-serif` }}
       >
         <Layout>
           {/* Header of popup */}
-          <header style={{ backgroundColor: "#2C57F5" }} className="w-full p-4">
-            <Row justify={"space-between"}>
-              <Col className="text-white text-sm font-medium">
+          <header
+            style={{ backgroundColor: "#2C57F5" }}
+            className="w-full md:p-4 p-2 px-4 overflow-x-scroll busket_header"
+          >
+            <Row justify={"space-between"} align={"middle"}>
+              <Col className="text-white text-sm font-medium md:mx-0 mx-2">
                 <p
                   className="font-normal"
                   style={{ fontFamily: `'Playfair Display', serif` }}
@@ -54,7 +59,7 @@ const BusketPopup = () => {
                 </p>
                 <p>24,000/-</p>
               </Col>
-              <Col className="text-white text-sm font-medium">
+              <Col className="text-white text-sm font-medium md:mx-0 mx-2">
                 <p
                   className="font-normal"
                   style={{ fontFamily: `'Playfair Display', serif` }}
@@ -63,7 +68,7 @@ const BusketPopup = () => {
                 </p>
                 <p>Unlimited</p>
               </Col>
-              <Col className="text-white text-sm font-medium">
+              <Col className="text-white text-sm font-medium md:mx-0 mx-2">
                 <p
                   className="font-normal"
                   style={{ fontFamily: `'Playfair Display', serif` }}
@@ -72,7 +77,7 @@ const BusketPopup = () => {
                 </p>
                 <p>NA</p>
               </Col>
-              <Col className="text-white text-sm font-medium">
+              <Col className="text-white text-sm font-medium md:mx-0 mx-2">
                 <p
                   className="font-normal"
                   style={{ fontFamily: `'Playfair Display', serif` }}
@@ -81,7 +86,7 @@ const BusketPopup = () => {
                 </p>
                 <p>32%</p>
               </Col>
-              <Col className="text-white text-sm font-medium">
+              <Col className="text-white text-sm font-medium md:mx-0 mx-2">
                 <p
                   className="font-normal"
                   style={{ fontFamily: `'Playfair Display', serif` }}

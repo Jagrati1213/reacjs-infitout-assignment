@@ -5,7 +5,7 @@ const menuData = [
   "Dashboard",
   "Option chain",
   "Strategy builder",
-  "Position",
+  "Positions",
   "Order book",
 ];
 const MenuList: React.FC = () => (
@@ -20,6 +20,7 @@ const MenuList: React.FC = () => (
           return (
             <Col
               key={i}
+              style={{ fontFamily: `'Satoshi', sans-serif` }}
               className="xl:my-0 my-4 text-sm mx-1 text-[#2C57F5] cursor-pointer"
             >
               {ele}
@@ -30,7 +31,8 @@ const MenuList: React.FC = () => (
         return (
           <Col
             key={i}
-            className="xl:my-0 my-4 text-black text-sm mx-1 hover:text-[#2C57F5] cursor-pointer"
+            style={{ fontFamily: `'Satoshi', sans-serif` }}
+            className="xl:my-0 my-4 text-black text-sm mx-1 hover:text-[#2C57F5] cursor-pointer font-medium"
           >
             {ele}
           </Col>

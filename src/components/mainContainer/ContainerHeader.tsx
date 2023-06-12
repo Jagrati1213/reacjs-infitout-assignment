@@ -22,7 +22,12 @@ export const TradeEle = (props: PropsName) => {
       >
         {props.tradeName}
       </p>
-      <p className="mx-0 text-sm font-medium mt-2">{props.tradePrice}</p>
+      <p
+        className="mx-0 text-sm font-medium mt-2"
+        style={{ fontFamily: `'Satoshi', sans-serif` }}
+      >
+        {props.tradePrice}
+      </p>
     </>
   );
 };
@@ -36,7 +41,7 @@ function ContainerHeader() {
       <Col
         xl={{ span: 11 }}
         xs={{ span: 24 }}
-        className="flex xl:justify-evenly md:justify-between xl:items-center lg:my-8 md:flex-nowrap flex-wrap md:flex-row flex-col"
+        className="flex xl:justify-evenly md:justify-between xl:items-center md:flex-nowrap flex-wrap md:flex-row flex-col"
       >
         <Space className="left_box flex lg:justify-evenly md:my-0 md:flex-nowrap flex-wrap">
           <Col className="relative float-label-input">
@@ -68,7 +73,7 @@ function ContainerHeader() {
           </Col>
         </Space>
 
-        <Space className="xl:my-1 my-6 ml-2 md:flex-nowrap flex-wrap">
+        <Space className="xl:my-1 my-2 ml-2 md:flex-nowrap flex-wrap">
           <Col className="text-left">
             <p
               className="mx-0 text-[#888888] xl:text-[12px] text-[10px] font-medium"
@@ -76,7 +81,10 @@ function ContainerHeader() {
             >
               Spot
             </p>
-            <p className="mx-0 text-sm font-medium mt-2">
+            <p
+              className="mx-0 text-sm font-medium mt-2"
+              style={{ fontFamily: `'Satoshi', sans-serif` }}
+            >
               18,245.3
               <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
                 0.35%
@@ -91,7 +99,10 @@ function ContainerHeader() {
             >
               Fut
             </p>
-            <p className="mx-0 text-sm font-medium mt-2">
+            <p
+              className="mx-0 text-sm font-medium mt-2"
+              style={{ fontFamily: `'Satoshi', sans-serif` }}
+            >
               18,251.1
               <span className="text-[#27AE60] xl:text-[12px] text-[10px] mx-2">
                 0.35%
@@ -154,7 +165,10 @@ function ContainerHeader() {
               />
             }
           >
-            <div className="flex justify-evenly text-base items-center cursor-pointer">
+            <div
+              className="flex justify-evenly text-base items-center cursor-pointer"
+              style={{ fontFamily: `'Satoshi', sans-serif` }}
+            >
               <BsSliders className="text-[#14142B]" />
               <p className="mx-2 font-medium">Filters</p>
             </div>
@@ -164,7 +178,11 @@ function ContainerHeader() {
         </Space>
       </Col>
 
-      <Col span={24} className="flex lg:justify-end flex-wrap">
+      <Col
+        span={24}
+        className="flex lg:justify-end flex-wrap"
+        style={{ fontFamily: `'Satoshi', sans-serif` }}
+      >
         <button className="m-2 px-8 py-[6px] bg-[#2C57F5] text-white rounded-[8px]">
           LTP
         </button>
