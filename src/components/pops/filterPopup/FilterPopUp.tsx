@@ -5,50 +5,44 @@ import { RxCross2 } from "react-icons/rx";
 import Style from "./Style.module.scss";
 
 function FilterPopUp() {
-  const cancel = (e: React.SyntheticEvent<EventTarget>): void => {};
+  // hide the popup
+  const cancel = (e: React.SyntheticEvent<EventTarget>): void => {
+    const parent = document.querySelector(".ant-popover");
+    parent?.classList.add("ant-popover-hidden");
+  };
   const handleChange = (value: { value: string; label: React.ReactNode }) => {};
   const onChangeNum = () => {}; //add type for value
   const onChange = (e: CheckboxChangeEvent) => {};
-  //   const showModal = () => {
-  //     setIsModalOpen(true);
-  //   };
-
-  //   const handleOk = () => {
-  //     setIsModalOpen(false);
-  //   };
-
-  //   const handleCancel = () => {
-  //     setIsModalOpen(false);
-  //   };
 
   return (
     <Row className={`${Style.filterPop} w-[280px] p-3`}>
+      {/* Filters */}
       <Col className="flex justify-between my-2" span={24}>
         <p className=" font-bold text-sm text-black">Filters</p>
-        <span>
+        <span onClick={cancel} className=" cursor-pointer">
           <RxCross2 />
         </span>
       </Col>
 
+      {/* LTP range */}
       <Col className="my-2" span={24}>
-        <p className="my-2 font-normal">LTP range</p>
+        <p className="my-2 font-normal text-sm">LTP range</p>
         <Row className="flex justify-between">
-          {/* <Input className="w-[120px]" /> */}
           <InputNumber
             className="w-[120px]"
-            defaultValue={1200}
             onChange={onChangeNum}
+            placeholder="Minimum LTP"
           />
           <p className="text-lg"> - </p>
-          {/* <Input className="w-[120px]" /> */}
           <InputNumber
             className="w-[120px]"
-            defaultValue={1200}
             onChange={onChangeNum}
+            placeholder="Maximum LTP"
           />
         </Row>
       </Col>
 
+      {/* LTP change */}
       <Col className="flex justify-between my-2" span={24}>
         <p className="my-2 font-normal">LTP change % by</p>
         <Select
@@ -71,12 +65,7 @@ function FilterPopUp() {
 
       <Col className="flex justify-between my-2" span={24}>
         <p className="my-2 font-normal">Specific strike</p>
-        {/* <Input className="w-[120px]" /> */}
-        <InputNumber
-          className="w-[120px]"
-          defaultValue={0}
-          onChange={onChangeNum}
-        />
+        <InputNumber className="w-[120px]" onChange={onChangeNum} />
       </Col>
 
       <Col className="flex justify-between my-2" span={24}>
