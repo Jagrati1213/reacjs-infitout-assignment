@@ -140,7 +140,14 @@ const data: DataType[] = [
 ];
 
 const BusketContent: React.FC = () => {
-  return <Table columns={columns} dataSource={data} scroll={{ x: 100 }} />;
+  return (
+    <Table
+      columns={columns}
+      dataSource={data}
+      scroll={{ x: 100 }}
+      pagination={false}
+    />
+  );
 };
 
 export default BusketContent;
