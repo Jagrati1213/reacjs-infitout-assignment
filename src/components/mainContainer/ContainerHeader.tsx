@@ -17,7 +17,7 @@ export const TradeEle = (props: PropsName) => {
   return (
     <>
       <p
-        className="mx-0 text-[#888888] xl:text-[12px] font-medium"
+        className="mx-0 text-[#888888] text-[12px] font-medium"
         style={{ fontFamily: `'Playfair Display', serif` }}
       >
         {props.tradeName}
