@@ -1,5 +1,8 @@
 .busketPop {
   width: 800px !important;
+  :global(.ant-layout header::-webkit-scrollbar) {
+    appearance: none;
+  }
   :global(.ant-modal-close) {
     display: none;
   }
@@ -45,10 +48,19 @@
   :global(.ant-table-content::-webkit-scrollbar) {
     appearance: none;
   }
+  :global(.busket_header .ant-row) {
+    flex-flow: inherit;
+  }
 }
 :global(.ant-modal-mask) {
   background-color: transparent !important;
 }
 :global(.ant-scroll-number-only-unit) {
   font-weight: 500;
+}
+:global(.busket_header::-webkit-scrollbar) {
+  appearance: none;
+}
+:global(.busket_header) {
+  padding-bottom: 0rem;
 }
