@@ -24,6 +24,7 @@
   :global(.ant-table-thead > tr > th) {
     background: #ffffff;
     font-weight: normal;
+    padding: 16px 10px !important;
   }
   :global(.ant-table-thead > tr > th::before) {
     width: 0px !important;
