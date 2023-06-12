@@ -15,8 +15,23 @@ const MenuList: React.FC = () => (
       style={{ letterSpacing: ".1px" }}
     >
       {menuData.map((ele, i) => {
+        // for active class
+        if (ele === "Option chain") {
+          return (
+            <Col
+              key={i}
+              className="xl:my-0 my-4 text-sm mx-1 text-[#2C57F5] cursor-pointer"
+            >
+              {ele}
+            </Col>
+          );
+        }
+        // for normal
         return (
-          <Col key={i} className="xl:my-0 my-4 text-black text-sm mx-1">
+          <Col
+            key={i}
+            className="xl:my-0 my-4 text-black text-sm mx-1 hover:text-[#2C57F5] cursor-pointer"
+          >
             {ele}
           </Col>
         );
