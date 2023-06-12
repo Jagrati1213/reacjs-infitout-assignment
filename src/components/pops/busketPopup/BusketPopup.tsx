@@ -21,8 +21,9 @@ const BusketPopup = () => {
   };
   return (
     <>
+      {/* Popup button */}
       <div className="ml-2" onClick={showModal}>
-        <Badge count={3}>
+        <Badge count={3} className="font-bold">
           <Button
             type={"primary"}
             className="px-10 bg-[#2C57F5] text-white rounded-none"
@@ -31,6 +32,8 @@ const BusketPopup = () => {
           </Button>
         </Badge>
       </div>
+
+      {/* Busket PopUp */}
       <Modal
         centered
         open={isModalOpen}
@@ -70,27 +73,35 @@ const BusketPopup = () => {
             <BusketContent />
           </Content>
 
+          {/* Modal footer */}
           <Footer className="bg-white px-4">
-            <Row className="footer" justify={"space-between"} align={"middle"}>
-              <Col className="text-sm font-normal">
+            <Row
+              className="footer md:flex-nowrap flex-wrap"
+              justify={"space-between"}
+              align={"middle"}
+            >
+              <Col className="text-sm font-normal my-1">
                 <p className="my-1">
                   Margin required: <span className="mx-2">₹ 2,43,630.3</span>
                 </p>
                 <p className="my-1">
-                  Available funds:{" "}
+                  Available funds:
                   <span className="mx-[15px]">₹ 12,00,000,00</span>
                 </p>
               </Col>
 
-              <Col>
-                <Button className="bg-[#FFD700] border-none rounded-none py-5 flex items-center">
+              <Col className="my-1">
+                <Button
+                  className="bg-[#FFD700] border-none rounded-none py-5 flex items-center font-medium"
+                  style={{ color: "black" }}
+                >
                   <PlusCircleOutlined />
                   <span>Auto hedge</span>
                 </Button>
               </Col>
 
-              <Col>
-                <Space>
+              <Col className="my-1">
+                <Space className="flex-wrap">
                   <Button
                     onClick={handleCancel}
                     className="rounded-none border-[#2C57F5] text-[#2C57F5] p-5 flex items-center cursor-pointer"
@@ -98,8 +109,8 @@ const BusketPopup = () => {
                     <span>Close basket</span>
                   </Button>
                   <Button
-                    onClick={handleOk}
-                    className="rounded-none border-[#2C57F5] bg-[#2C57F5] text-white p-5 flex items-center"
+                    type="primary"
+                    className="rounded-none border-[#2C57F5] bg-[#2C57F5] hover:bg:black text-white p-5 flex items-center"
                   >
                     <span>Place order</span>
                   </Button>
