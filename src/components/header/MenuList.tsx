@@ -16,7 +16,7 @@ const MenuList: React.FC = () => (
     >
       {menuData.map((ele, i) => {
         return (
-          <Col key={i} className="xl:my-0 my-4">
+          <Col key={i} className="xl:my-0 my-4 text-black text-sm mx-1">
             {ele}
           </Col>
         );
