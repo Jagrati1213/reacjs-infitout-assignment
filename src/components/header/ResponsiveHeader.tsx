@@ -15,7 +15,10 @@ function ResponsiveHeader() {
     setOpen(false);
   };
   return (
-    <section className="xl:hidden block">
+    <section
+      className="xl:hidden block z-10"
+      style={{ position: "sticky", top: 0 }}
+    >
       <Row
         justify={"space-between"}
         className="bg-white text-black px-5 border-2  shadow-md h-[73px] items-center flex-wrap"

@@ -17,7 +17,10 @@ function Navbar() {
   return (
     <>
       {/* Display on laptop */}
-      <Header className=" bg-white text-black px-5 border-2 h-[78px] overflow-hidden shadow-md shadow-[rgba(0, 0, 0, 0.12)] xl:block hidden z-10">
+      <Header
+        className=" bg-white text-black px-5 border-2 h-[78px] overflow-hidden shadow-md shadow-[rgba(0, 0, 0, 0.12)] xl:block hidden z-10"
+        style={{ position: "sticky", top: 0 }}
+      >
         <Row
           justify={"space-between"}
           className="h-[73px] items-center flex-wrap"
