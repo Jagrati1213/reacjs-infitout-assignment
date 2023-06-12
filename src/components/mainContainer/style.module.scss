@@ -1,5 +1,5 @@
 .mainContainer {
-  margin: 2rem 0;
+  margin: 1rem 0;
 
   // Target badge
   :global(.ant-badge-count) {
@@ -10,20 +10,28 @@
   :global(.ant-table-thead > tr:nth-child(1) > th) {
     background-color: #fff;
     border: none;
-    border-start-start-radius: 0px;
+    border-start-start-radius: 0px !important;
   }
   // Target 2nd row head
   :global(.ant-table-thead > tr:nth-child(2) > th) {
     background-color: #e8effb;
     border-bottom: 1px solid #99b8ed;
+    padding: 10px 8px !important;
+    text-align: center;
   }
   // remove right border
   :global(.ant-table-thead > tr:nth-child(2) > th::before) {
     width: 0;
   }
   // Target all td
-  :global(.ant-table-tbody > tr > td) {
+  :global(.ant-table.ant-table-middle .ant-table-tbody > tr > td) {
     font-weight: 500;
+    padding: 9px 8px;
+    text-align: center;
+
+    @media only screen and (max-width: 1440px) {
+      padding: 8px 8px;
+    }
   }
   // Target left 7 elements  & last 2 right row
   :global(.ant-table-tbody > tr > td:nth-child(-n + 7)),
