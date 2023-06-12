@@ -73,7 +73,7 @@ const columns: ColumnsType<DataType> = [
     },
   },
   {
-    title: "",
+    title: " ",
     key: "sl",
     dataIndex: "sl",
     render: () => {
