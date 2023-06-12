@@ -6,12 +6,6 @@
     background-color: #f8eb77 !important;
     color: black;
   }
-
-  // :global(.ant-modal) {
-  //   background-color: #f8eb77;
-  //   width: 280px;
-  // }
-
   // Target 1st row header
   :global(.ant-table-thead > tr:nth-child(1) > th) {
     background-color: #fff;
@@ -61,4 +55,7 @@
   :global(.ant-table-tbody > tr > td:nth-last-child(5)) {
     color: #ff6b6b;
   }
+}
+:global(.ant-table-content) {
+  min-height: 40vh;
 }
