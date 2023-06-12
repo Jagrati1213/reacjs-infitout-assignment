@@ -74,30 +74,32 @@ const BusketPopup = () => {
           </Content>
 
           {/* Modal footer */}
-          <Footer className="bg-white px-4">
+          <Footer className="bg-white lg:py-2 px-4 border border-t-[#D3D3D3]">
             <Row
               className="footer md:flex-nowrap flex-wrap"
               justify={"space-between"}
               align={"middle"}
             >
-              <Col className="text-sm font-normal my-1">
-                <p className="my-1">
-                  Margin required: <span className="mx-2">₹ 2,43,630.3</span>
-                </p>
-                <p className="my-1">
-                  Available funds:
-                  <span className="mx-[15px]">₹ 12,00,000,00</span>
-                </p>
-              </Col>
+              <Col className="text-sm font-normal my-1 flex ">
+                <div>
+                  <p className="my-1">
+                    Margin required: <span className="mx-2">₹ 2,43,630.3</span>
+                  </p>
+                  <p className="my-1">
+                    Available funds:
+                    <span className="mx-[15px]">₹ 12,00,000,00</span>
+                  </p>
+                </div>
 
-              <Col className="my-1">
-                <Button
-                  className="bg-[#FFD700] border-none rounded-none py-5 flex items-center font-medium"
-                  style={{ color: "black" }}
-                >
-                  <PlusCircleOutlined />
-                  <span>Auto hedge</span>
-                </Button>
+                <Col className="my-1">
+                  <Button
+                    className="bg-[#FFD700] border-none rounded-none py-5 flex items-center font-medium"
+                    style={{ color: "black" }}
+                  >
+                    <PlusCircleOutlined />
+                    <span>Auto hedge</span>
+                  </Button>
+                </Col>
               </Col>
 
               <Col className="my-1">
