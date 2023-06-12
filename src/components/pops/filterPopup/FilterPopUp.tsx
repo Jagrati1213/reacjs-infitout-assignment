@@ -29,13 +29,13 @@ function FilterPopUp() {
         <p className="my-2 font-normal text-sm">LTP range</p>
         <Row className="flex justify-between">
           <InputNumber
-            className="w-[120px]"
+            className="w-[120px] rounded-none"
             onChange={onChangeNum}
             placeholder="Minimum LTP"
           />
           <p className="text-lg"> - </p>
           <InputNumber
-            className="w-[120px]"
+            className="w-[120px] rounded-none"
             onChange={onChangeNum}
             placeholder="Maximum LTP"
           />
@@ -48,7 +48,7 @@ function FilterPopUp() {
         <Select
           labelInValue
           defaultValue={{ value: "toady", label: "Today Open" }}
-          className="w-[120px]"
+          className="w-[120px] rounded-none"
           onChange={handleChange}
           options={[
             {
@@ -63,11 +63,16 @@ function FilterPopUp() {
         />
       </Col>
 
+      {/* strike */}
       <Col className="flex justify-between my-2" span={24}>
         <p className="my-2 font-normal">Specific strike</p>
-        <InputNumber className="w-[120px]" onChange={onChangeNum} />
+        <InputNumber
+          className="w-[120px] rounded-none"
+          onChange={onChangeNum}
+        />
       </Col>
 
+      {/* Display */}
       <Col className="flex justify-between my-2" span={24}>
         <p className="my-2 font-normal">Display</p>
         <Col className="flex items-center">
