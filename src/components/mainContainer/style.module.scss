@@ -16,6 +16,7 @@
   :global(.ant-table-thead > tr:nth-child(1) > th) {
     background-color: #fff;
     border: none;
+    border-start-start-radius: 0px;
   }
   // Target 2nd row head
   :global(.ant-table-thead > tr:nth-child(2) > th) {
