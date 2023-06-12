@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, Table, Tag } from "antd";
+import { Button, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import TableData from "../Data/TableData.json";
 import Style from "./style.module.scss";
@@ -65,18 +65,12 @@ const columns: ColumnsType<DataType> = [
               wrap
               className="flex flex-row justify-center"
             >
-              <Tag
-                bordered={false}
-                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
-              >
+              <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#86C6E6] text-xs px-2 py-[.9px] mr-2">
                 B
-              </Tag>
-              <Tag
-                bordered={false}
-                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
-              >
+              </button>
+              <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#FFA8A8] text-xs px-2 py-[.9px] mr-2">
                 S
-              </Tag>
+              </button>
             </Space>
           );
         },
@@ -101,18 +95,12 @@ const columns: ColumnsType<DataType> = [
               wrap
               className="flex flex-row justify-center"
             >
-              <Tag
-                bordered={false}
-                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
-              >
+              <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#86C6E6] text-xs px-2 py-[.9px] mr-2">
                 B
-              </Tag>
-              <Tag
-                bordered={false}
-                className="inline bg-[#FFFFFF] border-[#D0D0D0]"
-              >
+              </button>
+              <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#FFA8A8] text-xs px-2 py-[.9px] mr-2">
                 S
-              </Tag>
+              </button>
             </Space>
           );
         },
