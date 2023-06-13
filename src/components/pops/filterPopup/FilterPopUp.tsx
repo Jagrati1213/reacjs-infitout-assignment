@@ -24,7 +24,7 @@ const FilterPopUp: React.FC = () => {
   // const handlerReset = () => {};
   return (
     <>
-      <Row className={`${Style.filterPop} w-[280px] p-3`}>
+      <Row className={`${Style.filterPop} w-[17.5rem] p-3`}>
         {/* Filters */}
         <Col className="flex justify-between my-2" span={24}>
           <p className=" font-bold text-sm text-black">Filters</p>
@@ -38,13 +38,13 @@ const FilterPopUp: React.FC = () => {
           <p className="my-2 font-normal text-sm">LTP range</p>
           <Row className="flex justify-between">
             <InputNumber
-              className="w-[120px] rounded-none"
+              className="w-[7.5rem] rounded-none"
               onChange={onChangeNum}
               placeholder="Minimum LTP"
             />
             <p className="text-lg"> - </p>
             <InputNumber
-              className="w-[120px] rounded-none"
+              className="w-[7.5rem] rounded-none"
               onChange={onChangeNum}
               placeholder="Maximum LTP"
             />
@@ -57,7 +57,7 @@ const FilterPopUp: React.FC = () => {
           <Select
             labelInValue
             defaultValue={{ value: "toady", label: "Today Open" }}
-            className="w-[120px] rounded-none"
+            className="w-[7.5rem] rounded-none"
             onChange={handleChange}
             options={[
               {
@@ -76,7 +76,7 @@ const FilterPopUp: React.FC = () => {
         <Col className="flex justify-between my-2" span={24}>
           <p className="my-2 font-normal">Specific strike</p>
           <InputNumber
-            className="w-[120px] rounded-none"
+            className="w-[7.5rem] rounded-none"
             onChange={onChangeNum}
           />
         </Col>
