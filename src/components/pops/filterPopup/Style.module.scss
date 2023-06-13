@@ -1,29 +1,56 @@
 .filterPop {
   border-bottom: 1px solid #d3d3d3;
 
+  // remove border-radius
   :global(.ant-checkbox-inner) {
     border-radius: 0px;
   }
+
+  // add checkbox bg color
   :global(
       .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner
+    ),
+  :global(
+      .ant-checkbox-wrapper-checked:not(.ant-checkbox-wrapper-disabled):hover
+        .ant-checkbox-inner
+    ),
+  :global(
+      .ant-checkbox-checked:not(.ant-checkbox-disabled):hover
+        .ant-checkbox-inner
     ) {
     background-color: #610bef !important;
     border-color: #610bef !important;
   }
+
+  // remove and add new check-box border
+  :global(.ant-checkbox-checked:after) {
+    border-color: #610bef !important;
+  }
+
+  //change select box icon color
   :global(.ant-select .ant-select-arrow) {
     color: #14142b;
     font-weight: 500;
   }
+
+  // remove radius from selector
   :global(.ant-select-selector) {
     border-radius: 0;
   }
 }
 
+:global(.ant-select-dropdown) {
+  z-index: 111111;
+}
+
+// make responsive popover
 :global(.ant-popover) {
   @media only screen and (max-width: 668px) {
     left: 10px !important;
   }
 }
+
+// add box shadow
 :global(.ant-popover .ant-popover-inner) {
   border-radius: 0px;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1), 0 3px 6px -4px rgba(0, 0, 0, 0.1),
@@ -32,6 +59,8 @@
     padding: 12px 0;
   }
 }
+
+// make style on popover buttons
 :global(.ant-popconfirm-buttons) {
   padding: 8px 12px;
 
