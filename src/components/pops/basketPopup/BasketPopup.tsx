@@ -110,13 +110,13 @@ const BasketPopup: React.FC = () => {
               justify={"space-between"}
               align={"middle"}
             >
-              <Col className="text-sm font-normal my-1 flex ">
+              <Col className="text-sm font-normal my-1 flex flex-wrap">
                 <div>
                   <p
                     className="my-1"
                     style={{ fontFamily: `'Playfair Display', serif` }}
                   >
-                    Margin required:{" "}
+                    Margin required:
                     <span className="mx-2 font-sans">₹ 2,43,630.3</span>
                   </p>
                   <p
