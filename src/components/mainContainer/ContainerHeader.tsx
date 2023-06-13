@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent, MouseEvent } from "react";
 import { Row, Col, Popconfirm, Input, Space } from "antd";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
@@ -9,6 +9,14 @@ import { QuestionCircleOutlined } from "@ant-design/icons";
 import BasketPopup from "../pops/basketPopup/BasketPopup";
 
 const confirm = () => {};
+const cancel = (
+  e:
+    | React.SyntheticEvent<EventTarget>
+    | MouseEvent<HTMLElement, MouseEvent>
+    | undefined
+): void => {
+  console.log(e?.target);
+};
 interface PropsName {
   tradeName: string;
   tradePrice: number;
@@ -34,6 +42,10 @@ export const TradeEle = (props: PropsName) => {
 };
 
 const ContainerHeader: React.FC = () => {
+  // function cancel(e) {
+  //   console.log(e);
+  //   console.error("Click on No");
+  // }
   return (
     // Main Container
     <Row
@@ -160,6 +172,7 @@ const ContainerHeader: React.FC = () => {
             placement="bottomRight"
             title={<FilterPopUp />}
             onConfirm={confirm}
+            onCancel={cancel}
             showCancel={true}
             okText="Apply"
             cancelText="Reset"
