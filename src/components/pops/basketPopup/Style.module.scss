@@ -1,0 +1,100 @@
+.basketPop {
+  width: 800px !important;
+
+  // hide popup header scrollbar
+  :global(.ant-layout header::-webkit-scrollbar) {
+    appearance: none;
+  }
+  // remove cross icon
+  :global(.ant-modal-close) {
+    display: none;
+  }
+  // remove padding from content
+  :global(.ant-modal-content) {
+    padding: 0;
+  }
+
+  // add height on header
+  :global(.ant-layout-header) {
+    height: 12px;
+    line-height: 12px;
+  }
+
+  // footer display none
+  :global(.ant-modal-footer) {
+    display: none;
+  }
+
+  // add tags color
+  :global(.ant-tag) {
+    color: black;
+    font-weight: 700;
+    border-radius: 0;
+  }
+
+  // adjust padding
+  :global(.ant-table-cell) {
+    padding: 6px 10px !important;
+  }
+
+  // add bg on 1st row
+  :global(.ant-table-thead > tr > th) {
+    background: #ffffff;
+    font-weight: normal;
+    padding: 16px 10px !important;
+  }
+
+  // remove width from right
+  :global(.ant-table-thead > tr > th::before) {
+    width: 0px !important;
+  }
+
+  // add bg color on even rows
+  :global(.ant-table-tbody > tr:nth-child(even)) {
+    background: #f9f9f9;
+    border-color: transparent;
+  }
+
+  // add bg color on odd rows
+  :global(.ant-table-tbody > tr:nth-child(odd)) {
+    background: #ffffff;
+    border-color: transparent;
+  }
+
+  // add height on table content
+  :global(.ant-table-content) {
+    height: 40vh;
+    max-height: 40vh;
+    overflow-y: scroll !important;
+  }
+
+  // remove scrollbar from content
+  :global(.ant-table-content::-webkit-scrollbar) {
+    appearance: none;
+  }
+
+  // remove inherit padding
+  :global(.basket_header .ant-row) {
+    flex-flow: inherit;
+  }
+}
+
+// add bg color
+:global(.ant-modal-mask) {
+  background-color: transparent !important;
+}
+
+// add badge font weight
+:global(.ant-scroll-number-only-unit) {
+  font-weight: 500;
+}
+
+// basket header scrollbar
+:global(.basket_header::-webkit-scrollbar) {
+  appearance: none;
+}
+
+// remove padding bottom
+:global(.basket_header) {
+  padding-bottom: 0rem;
+}
