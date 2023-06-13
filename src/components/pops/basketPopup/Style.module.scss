@@ -77,6 +77,11 @@
   :global(.basket_header .ant-row) {
     flex-flow: inherit;
   }
+
+  // remove flex-flow
+  :global(.ant-table-cell .ant-row) {
+    flex-flow: inherit;
+  }
 }
 
 // add bg color
