@@ -10,6 +10,7 @@ const menuData = [
 ];
 const MenuList: React.FC = () => (
   <>
+    {/* Menu Lists */}
     <Row
       className="justify-evenly font-medium xl:flex-row flex-col"
       style={{ letterSpacing: ".1px" }}
