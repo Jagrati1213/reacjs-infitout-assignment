@@ -4,7 +4,7 @@ import type { CheckboxChangeEvent } from "antd/es/checkbox";
 import { RxCross2 } from "react-icons/rx";
 import Style from "./Style.module.scss";
 
-function FilterPopUp() {
+const FilterPopUp: React.FC = () => {
   // hide the popup
   const cancel = (e: React.SyntheticEvent<EventTarget>): void => {
     const parent = document.querySelector(".ant-popover");
@@ -82,6 +82,6 @@ function FilterPopUp() {
       </Col>
     </Row>
   );
-}
+};
 
 export default FilterPopUp;
