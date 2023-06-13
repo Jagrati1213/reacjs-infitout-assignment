@@ -6,13 +6,14 @@ import "./style.css";
 import FilterPopUp from "../pops/filterPopup/FilterPopUp";
 import Style from "./style.module.scss";
 import { QuestionCircleOutlined } from "@ant-design/icons";
-import BusketPopup from "../pops/busketPopup/BusketPopup";
+import BasketPopup from "../pops/basketPopup/BasketPopup";
 
 const confirm = () => {};
 interface PropsName {
   tradeName: string;
   tradePrice: number;
 }
+// Trades Element
 export const TradeEle = (props: PropsName) => {
   return (
     <>
@@ -32,12 +33,14 @@ export const TradeEle = (props: PropsName) => {
   );
 };
 
-function ContainerHeader() {
+const ContainerHeader: React.FC = () => {
   return (
+    // Main Container
     <Row
       className={`${Style.mainContainer} flex-wrap lg:flex-row flex-col`}
       justify={"space-between"}
     >
+      {/* Input & variable */}
       <Col
         xl={{ span: 11 }}
         xs={{ span: 24 }}
@@ -112,6 +115,7 @@ function ContainerHeader() {
         </Space>
       </Col>
 
+      {/* variable & button for popup */}
       <Col
         xl={{ span: 11 }}
         xs={{ span: 24 }}
@@ -174,10 +178,11 @@ function ContainerHeader() {
             </div>
           </Popconfirm>
 
-          <BusketPopup />
+          <BasketPopup />
         </Space>
       </Col>
 
+      {/* Bottom buttons */}
       <Col
         span={24}
         className="flex lg:justify-end flex-wrap"
@@ -192,6 +197,6 @@ function ContainerHeader() {
       </Col>
     </Row>
   );
-}
+};
 
 export default ContainerHeader;

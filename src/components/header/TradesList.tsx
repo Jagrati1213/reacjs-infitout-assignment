@@ -23,6 +23,7 @@ const profileListData = [
 ];
 const TradesList: React.FC = () => (
   <Row className="flex justify-evenly xl:flex-row flex-col">
+    {/* Trades Lists */}
     {profileListData.map((ele, i) => {
       return (
         <Col
