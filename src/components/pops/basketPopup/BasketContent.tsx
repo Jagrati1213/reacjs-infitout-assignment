@@ -19,8 +19,11 @@ const columns: ColumnsType<DataType> = [
     title: "Instrument",
     dataIndex: "instrument",
     key: "instrument",
+    width: 180,
     render: (instrument) => {
-      return <p className=" font-medium">{instrument}</p>;
+      return (
+        <span className="mx-1 font-medium whitespace-nowrap">{instrument}</span>
+      );
     },
   },
   {
@@ -89,7 +92,7 @@ const columns: ColumnsType<DataType> = [
             <span className="mx-1 font-medium">Tgt</span>
           </Col>
 
-          <Col className="flex items-center justify-center mx-2  text-[#D3D3D3] cursor-pointer">
+          <Col className="flex items-center justify-center mx-2  text-[#D3D3D3] cursor-pointer hover:text-[#ff6b6b]">
             <IconContext.Provider value={{ size: "17px" }}>
               <RiDeleteBin5Line />
             </IconContext.Provider>
