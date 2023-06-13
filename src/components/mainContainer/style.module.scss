@@ -10,13 +10,13 @@
   :global(.ant-table-thead > tr:nth-child(1) > th) {
     background-color: #fff;
     border: none;
-    border-start-start-radius: 0px !important;
+    border-radius: 0rem !important;
   }
   // Target 2nd row head
   :global(.ant-table-thead > tr:nth-child(2) > th) {
     background-color: #e8effb;
-    border-bottom: 1px solid #99b8ed;
-    padding: 10px 8px !important;
+    border-bottom: 0.063rem solid #99b8ed;
+    padding: 0.625rem 0.5rem !important;
     text-align: center;
   }
   // remove right border
@@ -26,11 +26,11 @@
   // Target all td
   :global(.ant-table.ant-table-middle .ant-table-tbody > tr > td) {
     font-weight: 500;
-    padding: 9px 8px;
+    padding: 0.563rem 0.5rem;
     text-align: center;
 
     @media only screen and (max-width: 1440px) {
-      padding: 8px 8px;
+      padding: 0.5rem 0.5rem;
     }
   }
   // Target left 7 elements  & last 2 right row
@@ -38,7 +38,7 @@
   :global(.ant-table-tbody > tr:nth-last-child(1) > td),
   :global(.ant-table-tbody > tr:nth-last-child(2) > td) {
     background-color: #fffacd;
-    border-bottom: 1px solid #f8eb77;
+    border-bottom: 0.063rem solid #f8eb77;
   }
 
   // Target right 7 elements & last 2 left row
@@ -46,13 +46,13 @@
   :global(.ant-table-tbody > tr:nth-last-child(1) > td:nth-child(-n + 7)),
   :global(.ant-table-tbody > tr:nth-last-child(2) > td:nth-child(-n + 7)) {
     background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 0.063rem solid #e0e0e0;
   }
   // Target only 8th element
   :global(.ant-table-thead > tr:nth-child(2) > th:nth-child(8)),
   :global(.ant-table-tbody > tr > td:nth-child(8)) {
     background-color: #efe8fb;
-    border: 1px solid #d5bcfe;
+    border: 0.063rem solid #d5bcfe;
     border-top: none;
   }
 
