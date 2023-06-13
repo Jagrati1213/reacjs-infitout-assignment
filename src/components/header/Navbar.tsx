@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../image/tracktrades_logo.svg";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { Layout, Row, Col, message, Popover } from "antd";
+import { Layout, Row, Col, Popover } from "antd";
 import MenuList from "./MenuList";
 import TradesList from "./TradesList";
 import { IconContext } from "react-icons/lib";
