@@ -1,12 +1,26 @@
 import React from "react";
 import logo from "../../image/tracktrades_logo.svg";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { Layout, Row, Col, Popover } from "antd";
+import { Layout, Row, Col, Popover, Dropdown, MenuProps } from "antd";
 import MenuList from "./MenuList";
 import TradesList from "./TradesList";
 import { IconContext } from "react-icons/lib";
 import ResponsiveHeader from "./ResponsiveHeader";
+import { SettingOutlined, UserOutlined } from "@ant-design/icons";
 const { Header } = Layout;
+
+const items: MenuProps["items"] = [
+  {
+    label: "User Name",
+    key: "1",
+    icon: <UserOutlined />,
+  },
+  {
+    label: "Settings",
+    key: "2",
+    icon: <SettingOutlined />,
+  },
+];
 
 function Navbar() {
   return (
@@ -36,7 +50,7 @@ function Navbar() {
           </Col>
 
           {/* Profile icon */}
-          <Popover placement="bottomRight" title="Your Profile" trigger="click">
+          <Dropdown menu={{ items }} placement="bottomLeft" arrow>
             <Col
               className="text-sm font-medium flex justify-center items-center cursor-pointer"
               style={{ lineHeight: "0", fontFamily: `'Satoshi', sans-serif` }}
@@ -46,7 +60,7 @@ function Navbar() {
                 <RiArrowDownSLine />
               </IconContext.Provider>
             </Col>
-          </Popover>
+          </Dropdown>
         </Row>
       </Header>
 
