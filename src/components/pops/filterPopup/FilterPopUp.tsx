@@ -74,7 +74,7 @@ const FilterPopUp: React.FC = () => {
 
         {/* strike */}
         <Col className="flex justify-between my-2" span={24}>
-          <p className="my-2 font-normal">Specific strike</p>
+          <p className="font-normal">Specific strike</p>
           <InputNumber
             className="w-[7.5rem] rounded-none"
             onChange={onChangeNum}
