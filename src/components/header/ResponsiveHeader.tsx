@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Drawer, Row } from "antd";
-import logo from "../../image/logo.png";
+import logo from "../../image/tracktrades_logo.svg";
 import MenuList from "./MenuList";
 import { MenuFoldOutlined } from "@ant-design/icons";
 

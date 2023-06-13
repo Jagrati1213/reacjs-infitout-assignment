@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../image/logo.png";
+import logo from "../../image/tracktrades_logo.svg";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Layout, Row, Col, message, Popover } from "antd";
 import MenuList from "./MenuList";
@@ -50,7 +50,7 @@ function Navbar() {
         </Row>
       </Header>
 
-      {/* Display on tablet */}
+      {/* Display on tablet to mobile */}
       <ResponsiveHeader />
     </>
   );
