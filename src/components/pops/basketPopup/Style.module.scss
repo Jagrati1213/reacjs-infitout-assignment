@@ -1,5 +1,5 @@
 .basketPop {
-  width: 800px !important;
+  width: 50rem !important;
 
   // hide popup header scrollbar
   :global(.ant-layout header::-webkit-scrollbar) {
@@ -16,8 +16,8 @@
 
   // add height on header
   :global(.ant-layout-header) {
-    height: 12px;
-    line-height: 12px;
+    height: 0.75rem;
+    line-height: 0.75rem;
   }
 
   // footer display none
@@ -34,19 +34,19 @@
 
   // adjust padding
   :global(.ant-table-cell) {
-    padding: 6px 10px !important;
+    padding: 0.375rem 0.625rem !important;
   }
 
   // add bg on 1st row
   :global(.ant-table-thead > tr > th) {
     background: #ffffff;
     font-weight: normal;
-    padding: 16px 10px !important;
+    padding: 1rem 0.625rem !important;
   }
 
   // remove width from right
   :global(.ant-table-thead > tr > th::before) {
-    width: 0px !important;
+    width: 0rem !important;
   }
 
   // add bg color on even rows
