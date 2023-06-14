@@ -1,5 +1,5 @@
-import React, { SyntheticEvent, MouseEvent } from "react";
-import { Row, Col, Popconfirm, Input, Space } from "antd";
+import React, { useEffect, useState } from "react";
+import { Row, Col, Popconfirm, Input, Space, Select } from "antd";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { BsSliders } from "react-icons/bs";
 import "./style.css";
@@ -13,6 +13,15 @@ interface PropsName {
   tradeName: string;
   tradePrice: number;
 }
+const provinceData = ["Zhejiang", "Jiangsu"];
+
+const cityData = {
+  Zhejiang: ["Hangzhou", "Ningbo", "Wenzhou"],
+  Jiangsu: ["Nanjing", "Suzhou", "Zhenjiang"],
+};
+
+type CityName = keyof typeof cityData;
+
 // Trades Element
 export const TradeEle = (props: PropsName) => {
   return (
@@ -34,6 +43,22 @@ export const TradeEle = (props: PropsName) => {
 };
 
 const ContainerHeader: React.FC = () => {
+  const [cities, setCities] = useState(cityData[provinceData[0] as CityName]);
+  const [secondCity, setSecondCity] = useState(
+    cityData[provinceData[0] as CityName][0]
+  );
+
+  const handleProvinceChange = (value: CityName) => {
+    setCities(cityData[value]);
+    setSecondCity(cityData[value][0]);
+  };
+
+  const onSecondCityChange = (value: CityName) => {
+    setSecondCity(value);
+  };
+
+  const onSearch = (value: string) => {};
+
   return (
     // Main Container
     <Row
@@ -48,9 +73,29 @@ const ContainerHeader: React.FC = () => {
       >
         <Space className="left_box flex lg:justify-evenly md:my-0 md:flex-nowrap flex-wrap">
           <Col className="relative float-label-input">
-            <Input
+            {/* <Input
               id="scrip"
               className="bg-white py-2 px-1 block leading-normal uppercase rounded-none"
+            /> */}
+
+            <Select
+              id="scrip"
+              className="bg-white"
+              style={{ width: 150 }}
+              defaultValue={provinceData[0]}
+              showSearch
+              optionFilterProp="children"
+              onChange={(e) => handleProvinceChange(e)}
+              onSearch={onSearch}
+              filterOption={(input, option) =>
+                (option?.label ?? "")
+                  .toLowerCase()
+                  .includes(input.toLowerCase())
+              }
+              options={provinceData.map((province) => ({
+                label: province,
+                value: province,
+              }))}
             />
             <label
               htmlFor="scrip"
@@ -62,9 +107,17 @@ const ContainerHeader: React.FC = () => {
           </Col>
 
           <Col className="relative float-label-input">
-            <Input
+            {/* <Input
               id="exp"
               className=" w-full bg-white py-2 px-1 block leading-normal uppercase rounded-none"
+            /> */}
+            <Select
+              id="exp"
+              className="bg-white"
+              style={{ width: 150 }}
+              value={secondCity}
+              onChange={onSecondCityChange}
+              options={cities.map((city) => ({ label: city, value: city }))}
             />
             <label
               htmlFor="exp"
