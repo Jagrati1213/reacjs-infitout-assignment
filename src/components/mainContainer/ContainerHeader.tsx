@@ -13,14 +13,6 @@ interface PropsName {
   tradeName: string;
   tradePrice: number;
 }
-const provinceData = ["Zhejiang", "Jiangsu"];
-
-const cityData = {
-  Zhejiang: ["Hangzhou", "Ningbo", "Wenzhou"],
-  Jiangsu: ["Nanjing", "Suzhou", "Zhenjiang"],
-};
-
-type CityName = keyof typeof cityData;
 
 // Trades Element
 export const TradeEle = (props: PropsName) => {
@@ -43,21 +35,43 @@ export const TradeEle = (props: PropsName) => {
 };
 
 const ContainerHeader: React.FC = () => {
-  const [cities, setCities] = useState(cityData[provinceData[0] as CityName]);
-  const [secondCity, setSecondCity] = useState(
-    cityData[provinceData[0] as CityName][0]
-  );
+  // set static scrip name
+  const scripData = ["BANKNIFTY", "NIFTY", "ABB"];
 
-  const handleProvinceChange = (value: CityName) => {
-    setCities(cityData[value]);
-    setSecondCity(cityData[value][0]);
+  // create state
+  const [scripName, setScripName] = useState({});
+  const [scripDates, setScripDates] = useState<string[]>([]);
+  const [defaultval, setDefaultVal] = useState(scripDates[0]);
+
+  // fetching data
+  const fetchingData = async () => {
+    try {
+      const res = await fetch(
+        `https://api.tracktrades.in/get_option_chain?scrip=${scripName}`
+      );
+      const data = await res.json();
+      // store data in state
+      setScripDates(data.option_expiry_dates);
+      setDefaultVal(data.option_expiry_dates[0]);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  const onSecondCityChange = (value: CityName) => {
-    setSecondCity(value);
+  useEffect(() => {
+    fetchingData();
+  }, [scripName]);
+
+  // change Scrip Name
+  const handleProvinceChange = (value: string) => {
+    setScripName(value);
+    setDefaultVal(scripDates[0]);
   };
 
-  const onSearch = (value: string) => {};
+  // change Scrip Date
+  const onScripDateChange = (value: string) => {
+    setDefaultVal(value);
+  };
 
   return (
     // Main Container
@@ -73,28 +87,23 @@ const ContainerHeader: React.FC = () => {
       >
         <Space className="left_box flex lg:justify-evenly md:my-0 md:flex-nowrap flex-wrap">
           <Col className="relative float-label-input">
-            {/* <Input
-              id="scrip"
-              className="bg-white py-2 px-1 block leading-normal uppercase rounded-none"
-            /> */}
-
             <Select
-              id="scrip"
-              className="bg-white"
-              style={{ width: 150 }}
-              defaultValue={provinceData[0]}
               showSearch
+              style={{ width: 200 }}
+              placeholder="Search to Select"
               optionFilterProp="children"
-              onChange={(e) => handleProvinceChange(e)}
-              onSearch={onSearch}
               filterOption={(input, option) =>
-                (option?.label ?? "")
-                  .toLowerCase()
-                  .includes(input.toLowerCase())
+                (option?.label ?? "").includes(input)
               }
-              options={provinceData.map((province) => ({
-                label: province,
-                value: province,
+              onChange={handleProvinceChange}
+              filterSort={(optionA, optionB) =>
+                (optionA?.label ?? "")
+                  .toLowerCase()
+                  .localeCompare((optionB?.label ?? "").toLowerCase())
+              }
+              options={scripData.map((val, i) => ({
+                label: val,
+                value: val,
               }))}
             />
             <label
@@ -107,17 +116,16 @@ const ContainerHeader: React.FC = () => {
           </Col>
 
           <Col className="relative float-label-input">
-            {/* <Input
-              id="exp"
-              className=" w-full bg-white py-2 px-1 block leading-normal uppercase rounded-none"
-            /> */}
             <Select
               id="exp"
               className="bg-white"
               style={{ width: 150 }}
-              value={secondCity}
-              onChange={onSecondCityChange}
-              options={cities.map((city) => ({ label: city, value: city }))}
+              onChange={onScripDateChange}
+              value={defaultval}
+              options={scripDates.map((val, i) => ({
+                label: val,
+                value: val,
+              }))}
             />
             <label
               htmlFor="exp"
