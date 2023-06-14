@@ -60,11 +60,7 @@ const columns: ColumnsType<DataType> = [
         width: 100,
         render: () => {
           return (
-            <Space
-              size={[0, "small"]}
-              wrap
-              className="flex flex-row justify-center"
-            >
+            <Space size={[0, "small"]} className="flex flex-row justify-center">
               <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#86C6E6] text-xs px-2 py-[.9px] mr-2">
                 B
               </button>
@@ -90,11 +86,7 @@ const columns: ColumnsType<DataType> = [
         width: 100,
         render: () => {
           return (
-            <Space
-              size={[0, "small"]}
-              wrap
-              className="flex flex-row justify-center"
-            >
+            <Space size={[0, "small"]} className="flex flex-row justify-center">
               <button className="inline bg-[#FFFFFF] border border-[#D0D0D0] hover:bg-[#86C6E6] text-xs px-2 py-[.9px] mr-2">
                 B
               </button>
@@ -105,7 +97,6 @@ const columns: ColumnsType<DataType> = [
           );
         },
       },
-
       {
         title: "LTP",
         dataIndex: "RLTP",
