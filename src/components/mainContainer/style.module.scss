@@ -1,6 +1,16 @@
 .mainContainer {
   margin: 1rem 0;
 
+  // select box border radius
+  :global(.ant-select-selector) {
+    border-radius: 0rem;
+    line-height: 1.5;
+    display: block;
+  }
+  // hide arrow btn
+  :global(.ant-select-arrow) {
+    display: none;
+  }
   // Target badge
   :global(.ant-badge-count) {
     background-color: #f8eb77 !important;
