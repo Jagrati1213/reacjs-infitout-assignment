@@ -131,15 +131,6 @@ const data: DataType[] = [
     price: 80.3,
     trigger: 0,
   },
-  {
-    key: "4",
-    instrument: "NIFTY 18MAY23 19200 CE",
-    bs: "B",
-    type: "MIS",
-    qty: 50,
-    price: 80.3,
-    trigger: 0,
-  },
 ];
 
 const BasketContent: React.FC = () => {
