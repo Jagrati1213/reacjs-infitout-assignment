@@ -90,7 +90,6 @@ const ContainerHeader: React.FC = () => {
             <Select
               showSearch
               style={{ width: 200 }}
-              placeholder="Search to Select"
               optionFilterProp="children"
               filterOption={(input, option) =>
                 (option?.label ?? "").includes(input)
